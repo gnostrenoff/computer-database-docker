@@ -1,16 +1,14 @@
 jenkins:
   container_name: jenkins_ctn
-  build: jenkins
+  image: gnostrenoff/jenkins:latest
   links:
-    - dind
+    - dind:dind
   ports:
     - 8080:8080
-  volumes:
-    - .dockercfg:/root/.dockercfg
  
 dind:
   container_name: dind_ctn
-  build: dind
+  image: gnostrenoff/dind:latest
   expose:
     - 4242
   environment:

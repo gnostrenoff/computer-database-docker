@@ -1,4 +1,4 @@
-FROM jenkins:latest
+FROM  jenkins:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -9,8 +9,7 @@ RUN curl -sSL https://get.docker.com/ | sh \
 
 ENV DOCKER_HOST tcp://dind:4242
  
-VOLUME /root/.dockercfg
- 
-USER jenkins
 COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+
+COPY /job/ /var/jenkins_home/jobs/
