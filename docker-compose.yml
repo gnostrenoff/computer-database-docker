@@ -1,0 +1,18 @@
+jenkins:
+  container_name: jenkins_ctn
+  build: jenkins
+  links:
+    - dind
+  ports:
+    - 8080:8080
+  volumes:
+    - .dockercfg:/root/.dockercfg
+ 
+dind:
+  container_name: dind_ctn
+  build: dind
+  expose:
+    - 4242
+  environment:
+    PORT: 4242
+  privileged: true

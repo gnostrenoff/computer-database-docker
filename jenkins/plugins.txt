@@ -1,0 +1,6 @@
+dockerhub:1.0
+disk-usage:0.25
+git-client:1.18.0
+scm-api:0.2
+git:2.4.0
+
