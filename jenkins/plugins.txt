@@ -1,6 +1,10 @@
-dockerhub:1.0
-disk-usage:0.25
-git-client:1.18.0
-scm-api:0.2
-git:2.4.0
-
+dockerhub:latest
+scm-api:latest
+icon-shim:2.0.3
+credentials:1.25
+plain-credentials:1.1
+git:latest
+git-client:latest
+github:latest
+github-api:latest
+token-macro:latest
