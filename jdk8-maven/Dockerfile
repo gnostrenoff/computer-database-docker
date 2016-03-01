@@ -8,10 +8,8 @@ RUN curl -kfsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/bin
 
 ENV MAVEN_HOME /usr/share/maven
 
-RUN mkdir webapp
-
-WORKDIR /webapp
+WORKDIR /cdb
 
 ENTRYPOINT ["mvn"]
-CMD ["clean","test"]
+CMD ["clean","package"]
 

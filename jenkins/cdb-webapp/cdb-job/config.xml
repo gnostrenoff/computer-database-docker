@@ -34,7 +34,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>../scripts/execute.sh</command>
+      <command>cp -r /opt/cdb-config .
+	       ./cdb-config/execute.sh</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
