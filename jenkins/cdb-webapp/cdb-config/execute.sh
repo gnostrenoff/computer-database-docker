@@ -1,9 +1,8 @@
-#!/bin/bash
 
 if [ -e $(docker ps -aq -f "name=mysql-test") ]
 then
 echo "creating mysql-test container"
- docker create --name mysql-test -e MYSQL_ROOT_PASSWORD=root gnostrenoff/mysql-test &
+ docker create --name mysql-test -e MYSQL_ROOT_PASSWORD=root gnostrenoff/mysql-test
 fi
 
 docker start mysql-test
@@ -14,7 +13,7 @@ sleep 8
 if [ -e $(docker ps -aq -f "name=jdk8-maven") ]
 then
 echo "creating jdk8-maven container"
-  docker create --name jdk8-maven --link mysql-test:localhost -w /cdb maven:3.3.3-jdk-8 mvn clean package
+docker create --name jdk8-maven --link mysql-test:localhost -w /cdb maven:3.3.3-jdk-8 mvn clean package
 fi
 
 # copy jenkins workspace into jdk maven container, then start it 

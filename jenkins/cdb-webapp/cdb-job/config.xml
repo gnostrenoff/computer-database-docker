@@ -35,7 +35,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cp -r /opt/cdb-config .
-	       ./cdb-config/execute.sh</command>
+      bash cdb-config/execute.sh</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
