@@ -1,4 +1,6 @@
-s script can start a container on a remote glazer-container-agent.
+#!/bin/bash
+
+#This script can start a container on a remote glazer-container-agent.
 #
 # Examples:
 #
